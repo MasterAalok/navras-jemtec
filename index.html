@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAVRAS – Cultural Society of JEMTEC</title>
+  <meta name="description"
+    content="NAVRAS is the official Cultural Society of JIMS Engineering Management Technical Campus (JEMTEC) — events, performances, and creative expression." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="logo">
+        <img src="assets/team/logo.png" alt="NAVRAS Logo" class="logo-img">
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#past-events">Events</a>
+        <a href="#team">Team</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a href="#join" class="nav-cta">Join Us</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="hero" class="hero">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content" id="heroContent">
+      <span class="hero-eyebrow">Cultural Society of JEMTEC</span>
+      <h1 class="hero-title">NAV<span class="accent">RAS</span></h1>
+      <p class="hero-tagline">Where rhythm meets expression — nine emotions, one stage.</p>
+      <div class="hero-actions">
+        <a href="#past-events" class="btn btn-primary">Explore Events</a>
+        <a href="#join" class="btn btn-ghost">Join NAVRAS</a>
+      </div>
+    </div>
+    <div class="scroll-indicator"><span></span></div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section reveal">
+    <div class="container about-grid">
+      <div class="about-text">
+        <span class="eyebrow">About Navras</span>
+        <h2 class="section-title">Nine emotions. <br />One cultural heartbeat.</h2>
+        <p>NAVRAS is the official cultural society of JIMS Engineering Management Technical Campus (JEMTEC). Born from
+          the idea of the nine "rasas" of Indian art, we celebrate music, dance, drama, art and every form of creative
+          expression on campus.</p>
+        <div class="pillars">
+          <div class="pillar">
+            <h4>Vision</h4>
+            <p>To build a vibrant cultural ecosystem where every student finds their voice.</p>
+          </div>
+          <div class="pillar">
+            <h4>Mission</h4>
+            <p>Curate world-class cultural experiences that inspire, connect and elevate.</p>
+          </div>
+          <div class="pillar">
+            <h4>Values</h4>
+            <p>Creativity, inclusion, discipline and the joy of performing together.</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="placeholder placeholder-tall">Artistic Image Placeholder</div>
+        <div class="floating-card">"Art is the soul of a campus."</div>
+      </div>
+    </div>
+
+    <div class="container counters">
+      <div class="counter"><span class="num" data-target="48">0</span>
+        <p>Events Conducted</p>
+      </div>
+      <div class="counter"><span class="num" data-target="320">0</span>
+        <p>Active Members</p>
+      </div>
+      <div class="counter"><span class="num" data-target="9">0</span>
+        <p>Years Active</p>
+      </div>
+      <div class="counter"><span class="num" data-target="22">0</span>
+        <p>Collaborations</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAST EVENTS ============ -->
+  <section id="past-events" class="section dark-section reveal">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Past Events</span>
+        <h2 class="section-title">Moments that became <span class="accent">memories</span>.</h2>
+      </div>
+      <div class="events-grid" id="eventsGrid"><!-- injected by JS --></div>
+    </div>
+  </section>
+
+  <!-- Event Modal -->
+  <div class="modal" id="eventModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ============ UPCOMING EVENTS ============ -->
+  <section id="upcoming" class="section reveal">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Upcoming</span>
+        <h2 class="section-title">What's <span class="accent">next</span> on stage.</h2>
+      </div>
+      <div class="upcoming-grid" id="upcomingGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ TEAM ============ -->
+  <section id="team" class="section dark-section reveal">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">The People</span>
+        <h2 class="section-title">Meet the <span class="accent">Navras</span> family.</h2>
+      </div>
+
+      <h3 class="subhead">Core Team</h3>
+      <div class="team-grid" id="coreTeam"></div>
+
+      <h3 class="subhead" style="margin-top:80px">Members</h3>
+      <div class="team-grid members" id="membersTeam"></div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section id="gallery" class="section reveal">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Gallery</span>
+        <h2 class="section-title">Through the <span class="accent">lens</span>.</h2>
+      </div>
+      <div class="filters" id="galleryFilters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="events">Events</button>
+        <button class="filter" data-filter="bts">Behind The Scenes</button>
+        <button class="filter" data-filter="performances">Performances</button>
+        <button class="filter" data-filter="celebrations">Celebrations</button>
+      </div>
+      <div class="masonry" id="masonry"></div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose">×</button>
+    <div class="lightbox-content" id="lightboxContent"></div>
+  </div>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section id="testimonials" class="section dark-section reveal">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Voices</span>
+        <h2 class="section-title">What our <span class="accent">people</span> say.</h2>
+      </div>
+      <div class="slider" id="slider">
+        <div class="slides" id="slides"></div>
+        <div class="slider-controls">
+          <button id="prevSlide">‹</button>
+          <div class="dots" id="dots"></div>
+          <button id="nextSlide">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JOIN ============ -->
+  <section id="join" class="section reveal">
+    <div class="container join-grid">
+      <div>
+        <span class="eyebrow">Join Us</span>
+        <h2 class="section-title">Become part of <span class="accent">Navras</span>.</h2>
+        <p>Whether you sing, dance, write, design or simply love being on stage — there's a seat with your name on it.
+        </p>
+        <ul class="perks">
+          <li>Perform at flagship campus events</li>
+          <li>Collaborate with creators across departments</li>
+          <li>Lead initiatives, build your portfolio</li>
+        </ul>
+      </div>
+      <form class="join-form" id="joinForm">
+        <div class="field"><input type="text" required><label>Full Name</label></div>
+        <div class="field"><input type="email" required><label>Email</label></div>
+        <div class="field"><input type="text" required><label>Department</label></div>
+        <div class="field"><input type="text" required><label>Skills (Dance, Music, Art...)</label></div>
+        <div class="field"><textarea required rows="4"></textarea><label>Why do you want to join NAVRAS?</label></div>
+        <button type="submit" class="btn btn-primary full">Submit Application</button>
+        <p class="form-msg" id="formMsg"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section dark-section reveal">
+    <div class="container contact-grid">
+      <div>
+        <span class="eyebrow">Contact</span>
+        <h2 class="section-title">Let's <span class="accent">talk</span>.</h2>
+        <ul class="contact-info">
+          <li><strong>Email</strong><span>navras@jemtec.edu.in</span></li>
+          <li><strong>Address</strong><span>JEMTEC, 48/4, Knowledge Park-III, Greater Noida, UP</span></li>
+          <li><strong>Instagram</strong><span>@navras.jemtec</span></li>
+          <li><strong>LinkedIn</strong><span>NAVRAS – JEMTEC</span></li>
+        </ul>
+        <div class="placeholder placeholder-map">Embedded Map Placeholder</div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="field"><input type="text" required><label>Your Name</label></div>
+        <div class="field"><input type="email" required><label>Your Email</label></div>
+        <div class="field"><input type="text" required><label>Subject</label></div>
+        <div class="field"><textarea required rows="5"></textarea><label>Message</label></div>
+        <button type="submit" class="btn btn-primary full">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#hero" class="logo">
+          <span class="logo-mark">N</span>
+          <span class="logo-text">NAVRAS</span>
+        </a>
+        <p class="muted">Nine emotions. One stage.</p>
+      </div>
+      <div>
+        <h5>Quick Links</h5>
+        <a href="#about">About</a>
+        <a href="#past-events">Events</a>
+        <a href="#team">Team</a>
+        <a href="#gallery">Gallery</a>
+      </div>
+      <div>
+        <h5>Connect</h5>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">YouTube</a>
+        <a href="#">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> NAVRAS — Cultural Society of JEMTEC. All rights reserved.</p>
+      <p class="muted">"Art lives where curiosity dares."</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
