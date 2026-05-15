@@ -167,13 +167,14 @@ button {
   gap: 10px;
   font-weight: 700
 }
-.logo-img{
-  width: 80px;
+
+.logo-img {
+  width: 100px;
   height: auto;
   object-fit: contain;
 }
 
-.logo-text{
+.logo-text {
   font-size: 13px;
   letter-spacing: .22em;
   font-weight: 700;
@@ -251,50 +252,25 @@ button {
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
-  background: radial-gradient(1200px 700px at 70% 20%, #1a1660 0%, #0a0a0f 60%);
+
+  background:
+    url("assets/team/bg-image.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 
 .hero-bg {
   position: absolute;
   inset: 0;
-  overflow: hidden
-}
-
-.blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: .55;
-  animation: float 14s ease-in-out infinite
-}
-
-.blob-1 {
-  width: 520px;
-  height: 520px;
-  background: var(--indigo);
-  top: -120px;
-  left: -100px
-}
-
-.blob-2 {
-  width: 420px;
-  height: 420px;
-  background: var(--red);
-  bottom: -100px;
-  right: -80px;
-  animation-delay: -4s
-}
-
-.blob-3 {
-  width: 360px;
-  height: 360px;
-  background: var(--indigo-soft);
-  top: 40%;
-  left: 50%;
-  animation-delay: -8s
+  overflow: hidden 
+  /* display: none; */
 }
 
 @keyframes float {
@@ -316,16 +292,15 @@ button {
 .grid-overlay {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
+  background img: url('assets/team/herobg.png');
   background-size: 60px 60px;
   mask-image: radial-gradient(ellipse at center, #000 30%, transparent 70%);
 }
 
-.hero-content{
+.hero-content {
   position: relative;
   width: 100%;
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -346,10 +321,10 @@ button {
   border-radius: 999px;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, .04);
-  margin-bottom: 30px;
+  margin-bottom: 225px;
 }
 
-.hero-title{
+.hero-title {
   font-family: var(--font-display);
   font-weight: 900;
 
@@ -365,9 +340,9 @@ button {
   width: fit-content;
   margin: 0 auto;
 
-  padding-right: 40px; 
+  padding-right: 40px;
 
-  background: linear-gradient(180deg, #fff 30%, rgba(255,255,255,.4));
+  background: linear-gradient(180deg, #fff 30%, rgba(255, 255, 255, .4));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -386,7 +361,7 @@ button {
   font-size: clamp(15px, 1.6vw, 19px);
   max-width: 560px;
   margin: 24px auto 40px;
-  color: #cfcfe0
+  color: #cfcfe0 dis
 }
 
 .hero-actions {
@@ -472,6 +447,7 @@ button {
     transform: translateY(12px)
   }
 }
+
 
 /* ============ ABOUT ============ */
 .about-grid {
@@ -938,7 +914,7 @@ button {
   box-shadow: 0 30px 60px -25px rgba(107, 103, 255, .6)
 }
 
-.team-photo{
+.team-photo {
   width: 100px;
   height: 100px;
   margin: 0 auto 16px;
@@ -946,10 +922,10 @@ button {
   border-radius: 50%;
   overflow: hidden;
 
-  border: 3px solid rgba(255,255,255,.1);
+  border: 3px solid rgba(255, 255, 255, .1);
 }
 
-.team-photo img{
+.team-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1504,18 +1480,19 @@ button {
     grid-template-columns: repeat(2, 1fr)
   }
 }
-@media (max-width:768px){
 
-  .hero-content{
+@media (max-width:768px) {
+
+  .hero-content {
     padding: 0 20px;
   }
 
-  .hero-title{
+  .hero-title {
     font-size: clamp(58px, 16vw, 110px);
     padding-right: 16px;
   }
 
-  .hero-tagline{
+  .hero-tagline {
     max-width: 90%;
   }
 }
