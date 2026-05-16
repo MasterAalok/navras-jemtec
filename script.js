@@ -49,10 +49,19 @@ document.querySelectorAll('.num').forEach(n => counterIO.observe(n));
 /* -------- PAST EVENTS data + render -------- */
 const events = [
   {
-    title: 'Dance Battle', date: '12 Mar 2025', desc: 'A high-voltage face-off where crews battled for the campus crown.',
-    venue: 'Main Auditorium', participation: 'Open to all departments — solo & crew categories',
+    title: 'ADHYAAY',
+    date: '24 Mar 2025',
+    desc: 'A high-voltage face-off where crews battled for the campus crown.',
+
+    image: 'assets/event/adhyaay.jpeg',
+
+    venue: 'Main Auditorium',
+    participation: 'Open to all departments — solo & crew categories',
+
     highlights: ['Live DJ set', 'Celebrity guest judge', 'Prize pool of ₹50,000'],
+
     coords: ['Aarav Sharma', 'Ishita Verma'],
+
     timeline: ['5PM Crew check-in', '6PM Opening cypher', '7PM Battle rounds', '9PM Finals & awards']
   },
   {
@@ -97,7 +106,9 @@ events.forEach((ev, i) => {
   const card = document.createElement('article');
   card.className = 'event-card';
   card.innerHTML = `
-    <div class="event-poster"><div class="placeholder">Poster — ${ev.title}</div></div>
+    <div class="event-poster">
+  <img src="${ev.image}" alt="${ev.title}">
+</div>
     <div class="event-body">
       <span class="event-date">${ev.date}</span>
       <h3 class="event-title">${ev.title}</h3>
@@ -116,7 +127,9 @@ eventsGrid.addEventListener('click', e => {
   if (!btn) return;
   const ev = events[+btn.dataset.event];
   modalBody.innerHTML = `
-    <div class="modal-banner">Banner — ${ev.title}</div>
+    <div class="modal-banner">
+  <img src="${ev.image}" alt="${ev.title}">
+</div>
     <div class="modal-content">
       <h3>${ev.title}</h3>
       <div class="modal-meta">
@@ -133,8 +146,12 @@ eventsGrid.addEventListener('click', e => {
       <div class="modal-coordinators">${ev.coords.map(c => `<span class="coord">${c}</span>`).join('')}</div>
       <h4>Event Gallery</h4>
       <div class="modal-gallery">
-        ${Array.from({ length: 6 }).map((_, i) => `<div class="placeholder">Photo ${i + 1}</div>`).join('')}
-      </div>
+
+  <img src="${ev.image}" alt="${ev.title}">
+  <img src="${ev.image}" alt="${ev.title}">
+  <img src="${ev.image}" alt="${ev.title}">
+
+</div>
     </div>`;
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -245,14 +262,14 @@ const core = [
     tag: 'Voice of NAVRAS.',
     image: 'assets/team/8.png'
   },
-  
+
   {
     name: 'Himanshu Phogat',
     role: 'Treasurer',
     tag: 'Keeping it balanced.',
     image: 'assets/team/9.png'
   },
-  
+
   {
     name: 'Hiren',
     role: 'Treasurer',
@@ -330,14 +347,14 @@ const members = [
     tag: 'Building NAVRAS online.',
     image: 'assets/team/20.png'
   },
-  
+
   {
     name: 'Ashima',
     role: 'Social Media Co-Head',
     tag: 'Keeping creativity connected.',
     image: 'assets/team/21.png'
   },
-  
+
   {
     name: 'Deepak Dhoundiyal',
     role: 'Marketing Head',
@@ -379,7 +396,7 @@ const members = [
     tag: 'Inspired to create.',
     image: 'assets/team/27.png'
   },
-  
+
   {
     name: 'Kartik Vats',
     role: 'Member',
