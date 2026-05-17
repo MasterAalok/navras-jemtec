@@ -50,54 +50,70 @@ document.querySelectorAll('.num').forEach(n => counterIO.observe(n));
 const events = [
   {
     title: 'ADHYAAY',
-    date: '24 Mar 2025',
-    desc: 'A high-voltage face-off where crews battled for the campus crown.',
+    date: '24 Mar 2026',
+    desc: 'ADHYAAY 2026 brings alive the glamour, drama, music, colors, and larger-than-life energy of Bollywood. From soulful melodies to elegant ramp walks, from vibrant rangoli designs to electrifying dance moves, every performance becomes a cinematic masterpiece. Step into a world where every participant is a star, every stage is a set, and every moment feels straight out of a Bollywood blockbuster.',
 
     image: 'assets/event/adhyaay.jpeg',
+    banner: 'assets/event/banner.jpg',
+    gallery: [
+      'assets/event/as.jpeg',
+      'assets/event/ad.jpeg',
+      'assets/event/at.jpeg',
+    ],
 
-    venue: 'Main Auditorium',
+
+    venue: 'Auditorium',
     participation: 'Open to all departments — solo & crew categories',
 
-    highlights: ['Live DJ set', 'Celebrity guest judge', 'Prize pool of ₹50,000'],
+    highlights: ['Immersive stage setup with cinematic lighting', 'High-energy performances from top campus talents', 'Professional photography & videography coverage'],
 
-    coords: ['Aarav Sharma', 'Ishita Verma'],
+    coords: ['AMANAT', 'RAKSHIT'],
 
-    timeline: ['5PM Crew check-in', '6PM Opening cypher', '7PM Battle rounds', '9PM Finals & awards']
+    timeline: ['SARGAM - Singing (10:00 AM - 11:15 AM)', 'ADAAH - Modelling (12:30 PM - 1:30 PM)', 'TAAL - Dance (2:00 PM - 4:00 PM)']
   },
+
   {
-    title: 'Rangmanch', date: '04 Feb 2025', desc: 'An evening of street plays and stage drama tackling stories that matter.',
-    venue: 'Open-Air Theatre', participation: 'Drama clubs & individual performers',
-    highlights: ['7 stage acts', 'Bilingual performances', 'Audience choice award'],
-    coords: ['Rohan Mehta', 'Saanvi Kapoor'],
-    timeline: ['6PM Doors open', '6:30PM Opening act', '8PM Intermission', '9PM Closing piece']
+    title: 'AARAMBH 2025',
+    date: '16 Oct 2025',
+    desc: 'AARAMBH 2025, the cultural fest by NAVRAS, the cultural society of CSE celebrates the vibrant essence of an Indian wedding — a timeless blend of emotions, rituals, and joy. With loud dhol beats, elegant lehenga swirls, and soulful melodies, the fest brings alive the magic where tradition meets celebration. AARAMBH 2025 is more than an event — it’s a journey of festivities, connections, and creativity. ',
+
+    image: 'assets/event/p.jpeg',
+    banner: 'assets/event/banner.jpg',
+    gallery: [
+      'assets/event/s.jpeg',
+      'assets/event/d.jpeg',
+      'assets/event/t.jpeg',
+    ],
+
+    venue: 'Auditorium',
+    participation: 'Solo & Crew categories',
+
+    highlights: ['Immersive stage setup with cinematic lighting', 'High-energy performances from top campus talents', 'Professional photography & videography coverage'],
+
+    coords: ['Nandani Bisht', 'Akansha Bisht', 'Abhishek Mali'],
+
+    timeline: ['Saarang - Singing (10:00 AM - 11:15 AM)', 'DARPAN - Modelling (12:30 PM - 1:30 PM)', 'TAALMEL - Dance (2:00 PM - 4:00 PM)']
   },
+
   {
-    title: 'Open Mic Night', date: '18 Jan 2025', desc: 'Poets, comics and singers took the spotlight in an unfiltered evening.',
-    venue: 'Cafeteria Stage', participation: 'Walk-in slots + curated lineup',
-    highlights: ['22 performers', 'Live acoustic sets', 'Spoken-word showcase'],
-    coords: ['Devansh Roy', 'Meher Sodhi'],
-    timeline: ['5PM Sign-ups', '6PM First half', '7:30PM Headliners', '9PM Open jam']
-  },
-  {
-    title: 'Fashion Show', date: '09 Nov 2024', desc: 'A runway celebrating identity, sustainability and student designers.',
-    venue: 'Convention Hall', participation: 'Models & designers from all batches',
-    highlights: ['4 themed segments', 'Sustainable fashion line', 'Designer awards'],
-    coords: ['Tanya Bhatt', 'Kabir Anand'],
-    timeline: ['7PM Walk-in', '7:30PM Segment 1', '8:30PM Designer showcase', '9:30PM Finale walk']
-  },
-  {
-    title: 'Music Night', date: '21 Oct 2024', desc: 'Bands, soloists and a headlining alumni act — one unforgettable night.',
-    venue: 'Main Quad', participation: 'Bands, vocalists, instrumentalists',
-    highlights: ['6 student bands', 'Alumni headliner', 'Acoustic finale'],
-    coords: ['Aryan Khanna', 'Niharika Jain'],
-    timeline: ['6PM Soundcheck', '7PM Opening band', '8:30PM Headliner', '10PM Acoustic close']
-  },
-  {
-    title: 'Freshers Fest', date: '30 Aug 2024', desc: 'Welcoming the new batch with games, performances and a grand finale.',
-    venue: 'Sports Ground', participation: 'All first-year students',
-    highlights: ['Mr. & Ms. Fresher', 'Live band', 'Theme: Neon Carnival'],
-    coords: ['Vivaan Suri', 'Riya Chawla'],
-    timeline: ['4PM Welcome games', '6PM Performances', '8PM Crowning', '9PM DJ night']
+    title: 'ABHYUDAY',
+    date: '27 Mar 2025',
+    desc: 'ABHYUDAY 2025, A Spectacle of Culture and Creativity by NAVRAS, the cultural society of JEMTEC, blends Indian artistic heritage with a modern edge, creating a melting pot of talent where tradition meets innovation. From rhythmic dance and soulful singing to thought-provoking debates , mind bending quizes that challenge the logical mind and powerful nukkad natak, the festival is alive with energy and expression.',
+
+    image: 'assets/event/abhyuday.jpeg',
+    banner: 'assets/event/banner.jpg',
+    gallery: [
+      'assets/event/abhyuday-team.jpeg'
+    ],
+
+    venue: 'Auditorium',
+    participation: 'Open to all departments — solo & crew categories',
+
+    highlights: ['Immersive stage setup with cinematic lighting', 'High-energy performances from top campus talents', 'Professional photography & videography coverage'],
+
+    coords: ['ANSH PAUL', 'APARNA CHAUHAN', 'PARMEET'],
+
+    timeline: ['SARGAM - Singing (10:00 AM - 11:15 AM)', 'MOKSH - Nukkad Natak (12:30 PM - 1:30 PM)', 'THEORY OF STEPS - Dance (2:00 PM - 4:00 PM)', 'ITS DEBATABLE - Debate', 'GEEK-O-PEDIA - Quiz']
   },
 ];
 
@@ -128,7 +144,7 @@ eventsGrid.addEventListener('click', e => {
   const ev = events[+btn.dataset.event];
   modalBody.innerHTML = `
     <div class="modal-banner">
-  <img src="${ev.image}" alt="${ev.title}">
+  <img src="${ev.banner}" alt="${ev.title}">
 </div>
     <div class="modal-content">
       <h3>${ev.title}</h3>
@@ -145,11 +161,12 @@ eventsGrid.addEventListener('click', e => {
       <h4>Coordinators</h4>
       <div class="modal-coordinators">${ev.coords.map(c => `<span class="coord">${c}</span>`).join('')}</div>
       <h4>Event Gallery</h4>
-      <div class="modal-gallery">
 
-  <img src="${ev.image}" alt="${ev.title}">
-  <img src="${ev.image}" alt="${ev.title}">
-  <img src="${ev.image}" alt="${ev.title}">
+<div class="modal-gallery">
+
+  ${ev.gallery.map(img => `
+    <img src="${img}" alt="${ev.title}">
+  `).join('')}
 
 </div>
     </div>`;
@@ -166,9 +183,9 @@ modal.addEventListener('click', e => {
 
 /* -------- UPCOMING EVENTS + countdown -------- */
 const upcoming = [
-  { name: 'Spring Sangam', desc: 'A two-day cultural festival featuring music, dance and drama.', date: daysFromNow(28) },
-  { name: 'Indie Music Fest', desc: 'A curated lineup of student bands and indie artists.', date: daysFromNow(54) },
-  { name: 'Annual Day', desc: 'The grand finale of the year — performances, awards and more.', date: daysFromNow(90) },
+  { name: 'SOON', desc: 'SOON', date: daysFromNow(28) },
+  { name: 'SOON', desc: 'SOON', date: daysFromNow(54) },
+  { name: 'SOON', desc: 'SOON', date: daysFromNow(90) },
 ];
 function daysFromNow(d) { const x = new Date(); x.setDate(x.getDate() + d); return x; }
 
@@ -398,10 +415,10 @@ const members = [
   },
 
   {
-    name: 'Kartik Vats',
+    name: 'Ayush Tiwari',
     role: 'Member',
     tag: 'Powered by ideas.',
-    image: 'assets/team/ishita.jpg'
+    image: 'assets/team/28.png'
   },
 ];
 
