@@ -445,18 +445,53 @@ renderTeam('membersTeam', members);
 
 /* -------- GALLERY + filter + lightbox -------- */
 const gallery = [
-  { cat: 'events', label: 'Annual Fest' }, { cat: 'performances', label: 'Dance Act' },
-  { cat: 'bts', label: 'Backstage' }, { cat: 'celebrations', label: 'Holi 2024' },
-  { cat: 'events', label: 'Open Mic' }, { cat: 'performances', label: 'Band Night' },
-  { cat: 'bts', label: 'Rehearsals' }, { cat: 'celebrations', label: 'Diwali' },
-  { cat: 'events', label: 'Fashion Show' }, { cat: 'performances', label: 'Solo Vocal' },
-  { cat: 'bts', label: 'Set Design' }, { cat: 'celebrations', label: 'Freshers' },
+  {
+    cat: 'events',
+    image: 'assets/gallery/adhyaay.jpeg'
+  },
+  {
+    cat: 'events',
+    image: 'assets/gallery/abhyuday.jpeg'
+  },
+  {
+    cat: 'events',
+    image: 'assets/gallery/d.jpeg'
+  },
+  {
+    cat: 'events',
+    image: 'assets/gallery/p.jpeg'
+  },
+  {
+    cat: 'events',
+    image: 'assets/gallery/s.jpeg'
+  },
+  {
+    cat: 'events',
+    image: 'assets/gallery/t.jpeg'
+  },
+
+  {
+    cat: 'performances',
+    image: 'assets/gallery/per.jpg'
+  },
+
+  {
+    cat: 'bts',
+    image: 'assets/gallery/bts.jpg'
+  },
+
+  {
+    cat: 'celebrations',
+    image: 'assets/gallery/cale.jpg'
+  }
 ];
 const masonry = document.getElementById('masonry');
 gallery.forEach(g => {
   const item = document.createElement('div');
   item.className = 'item'; item.dataset.cat = g.cat;
-  item.innerHTML = `<div class="placeholder">${g.label}</div>`;
+  item.innerHTML = `
+  <img src="${g.image}" alt="gallery image">
+`;
   masonry.appendChild(item);
 });
 
@@ -483,10 +518,28 @@ lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.cl
 
 /* -------- TESTIMONIALS slider -------- */
 const testimonials = [
-  { name: 'Ananya Singh', dept: 'CSE, 3rd Year', quote: 'NAVRAS gave me a stage and a second family. Every event feels like coming home.' },
-  { name: 'Rohit Bansal', dept: 'ECE, 2nd Year', quote: 'From shy listener to lead vocalist — this society changed how I see myself.' },
-  { name: 'Priya Menon', dept: 'MBA, 1st Year', quote: 'The energy backstage is unreal. You don\'t just join NAVRAS, you live it.' },
-  { name: 'Karan Gupta', dept: 'CSE, 4th Year', quote: 'Four years later, my best memories of college are NAVRAS evenings.' },
+
+  {
+    name: 'Ayushi',
+    dept: 'Alumini',
+    quote: 'NAVRAS gave me a stage and a second family.',
+    image: 'assets/testimonials/a.png'
+  },
+
+  {
+    name: '',
+    dept: 'CSE, 3rd Year',
+    quote: 'This society changed how I see myself.',
+    image: 'assets/testimonials/2.jpg'
+  },
+
+  {
+    name: '',
+    dept: 'CSE, 1st Year',
+    quote: 'The energy backstage is unreal.',
+    image: 'assets/testimonials/3.jpg'
+  }
+
 ];
 const slidesEl = document.getElementById('slides');
 const dotsEl = document.getElementById('dots');
@@ -494,7 +547,9 @@ let curSlide = 0;
 testimonials.forEach((t, i) => {
   slidesEl.insertAdjacentHTML('beforeend', `
     <div class="slide">
-      <div class="placeholder">Photo</div>
+      <div class="testimonial-photo">
+  <img src="${t.image}" alt="${t.name}">
+</div>
       <blockquote>"${t.quote}"</blockquote>
       <cite>${t.name}<small>${t.dept}</small></cite>
     </div>`);

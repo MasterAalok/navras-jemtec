@@ -1066,6 +1066,12 @@ button {
   position: relative;
   transition: .4s;
 }
+.masonry .item img{
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  object-fit: cover;
+}
 
 .masonry .item .placeholder {
   border-radius: 0;
@@ -1144,7 +1150,31 @@ button {
   font-size: 24px
 }
 
+
+
 /* ============ TESTIMONIALS ============ */
+.testimonial-photo{
+  width: 90px;
+  height: 90px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  border: 3px solid rgba(255,255,255,.1);
+}
+
+.testimonial-photo img{
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
 .slider {
   position: relative;
   max-width: 780px;
@@ -1546,5 +1576,258 @@ button {
 
   .hero-tagline {
     max-width: 90%;
+  }
+}
+
+/* =========================================================
+   ULTRA RESPONSIVE FIX
+========================================================= */
+
+/* ---------- Large Tablets ---------- */
+@media (max-width: 1024px){
+
+  .hero-title{
+    font-size: clamp(60px, 12vw, 120px);
+    margin: -100px 0 40px;
+  }
+
+  .events-grid,
+  .upcoming-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .team-grid{
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  .team-grid.members{
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  .about-grid,
+  .contact-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .about-visual{
+    max-width: 600px;
+    margin: auto;
+  }
+}
+
+/* ---------- Tablets ---------- */
+@media (max-width: 768px){
+
+  .section{
+    padding: 80px 0;
+  }
+
+  .section-title{
+    font-size: 42px;
+    line-height: 1.2;
+  }
+
+  .hero{
+    min-height: 100svh;
+    padding: 120px 0 60px;
+  }
+
+  .hero-eyebrow{
+    margin-bottom: 120px;
+    font-size: 10px;
+    letter-spacing: .25em;
+  }
+
+  .hero-title{
+    font-size: clamp(52px,16vw,90px);
+    margin: -60px 0 30px;
+    line-height: 1;
+  }
+
+  .hero-actions{
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .hero-actions .btn{
+    width: 90%;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .events-grid,
+  .upcoming-grid,
+  .footer-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid,
+  .team-grid.members{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .counters{
+    grid-template-columns: repeat(2,1fr);
+    padding: 30px 20px;
+  }
+
+  .counter .num{
+    font-size: 42px;
+  }
+
+  .modal-gallery{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .modal-content{
+    padding: 24px;
+  }
+
+  .slide{
+    padding: 20px;
+  }
+
+  .slide blockquote{
+    font-size: 20px;
+  }
+
+  .contact-form{
+    padding: 24px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 480px){
+
+  .container{
+    width: 92%;
+  }
+
+  .logo-img{
+    width: 70px;
+  }
+
+  .hero{
+    padding-top: 100px;
+  }
+
+  .hero-eyebrow{
+    margin-bottom: 90px;
+    padding: 6px 12px;
+    font-size: 9px;
+  }
+
+  .hero-title{
+    font-size: 58px;
+    margin: -40px 0 24px;
+    letter-spacing: .02em;
+  }
+
+  .section-title{
+    font-size: 34px;
+  }
+
+  .about-text p{
+    font-size: 15px;
+  }
+
+  .pillars{
+    grid-template-columns: 1fr;
+  }
+
+  .events-grid{
+    gap: 20px;
+  }
+
+  .event-poster{
+    height: 220px;
+  }
+
+  .event-title{
+    font-size: 22px;
+  }
+
+  .team-grid,
+  .team-grid.members{
+    grid-template-columns: 1fr;
+  }
+
+  .team-card{
+    padding: 18px;
+  }
+
+  .masonry{
+    columns: 1;
+  }
+
+  .filters{
+    justify-content: center;
+  }
+
+  .filter{
+    font-size: 12px;
+    padding: 7px 14px;
+  }
+
+  .modal-gallery{
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content h3{
+    font-size: 28px;
+  }
+
+  .slide blockquote{
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .testimonial-photo{
+    width: 75px;
+    height: 75px;
+  }
+
+  .footer{
+    text-align: center;
+  }
+
+  .footer-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .scroll-indicator{
+    display: none;
+  }
+}
+
+/* ---------- Small Devices ---------- */
+@media (max-width: 360px){
+
+  .hero-title{
+    font-size: 48px;
+  }
+
+  .section-title{
+    font-size: 28px;
+  }
+
+  .btn{
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+
+  .counter .num{
+    font-size: 34px;
+  }
+
+  .team-photo{
+    width: 85px;
+    height: 85px;
   }
 }
